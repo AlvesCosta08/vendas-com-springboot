@@ -55,24 +55,6 @@ Representa uma categoria de produtos (ex: Eletrônicos, Roupas, Alimentos).
 
 ---
 
-## 🔗 Relacionamento entre Tabelas
-
-```mermaid
-erDiagram
-    CATEGORIA ||--o{ PRODUTO : "possui"
-    CATEGORIA {
-        bigint codigo PK
-        varchar nome
-    }
-    PRODUTO {
-        bigint codigo PK
-        varchar descricao
-        integer quantidade
-        decimal preco_custo
-        decimal preco_venda
-        varchar observacao
-        bigint codigo_categoria FK
-    }
 
 ⚙️ Tecnologias Utilizadas
 Jakarta Persistence API (JPA) — para mapeamento ORM.
